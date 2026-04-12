@@ -10,46 +10,49 @@ interface PricingSectionProps {
 
 const pricingPlans = [
   {
-    name: "Essential",
-    subtitle: "Perfect start",
-    price: "120",
-    description: "Ideal for first-time visitors looking to refresh their skin",
+    name: "Základní",
+    subtitle: "Ideální start",
+    price: "2 900",
+    currency: "Kč",
+    description: "Ideální pro nové klienty, kteří chtějí osvěžit svou pleť",
     features: [
-      "Initial skin consultation",
-      "Basic facial treatment",
-      "Personalized skincare plan",
-      "Aftercare guidance",
+      "Úvodní konzultace pleti",
+      "Základní ošetření obličeje",
+      "Personalizovaný plán péče",
+      "Poradenství po ošetření",
     ],
     popular: false,
   },
   {
     name: "Signature",
-    subtitle: "Most popular",
-    price: "280",
-    description: "Our most popular package combining multiple rejuvenation treatments",
+    subtitle: "Nejoblíbenější",
+    price: "6 900",
+    currency: "Kč",
+    description: "Náš nejoblíbenější balíček kombinující více omlazovacích procedur",
     features: [
-      "Comprehensive skin analysis",
-      "Hydrafacial treatment",
-      "LED light therapy",
-      "Premium serums included",
-      "Follow-up consultation",
-      "10% off future treatments",
+      "Komplexní analýza pleti",
+      "Hydrafacial ošetření",
+      "LED světelná terapie",
+      "Prémiová séra v ceně",
+      "Následná konzultace",
+      "10% sleva na další ošetření",
     ],
     popular: true,
   },
   {
-    name: "Luxe",
-    subtitle: "Ultimate experience",
-    price: "520",
-    description: "The complete luxury experience for total skin transformation",
+    name: "Premium",
+    subtitle: "Kompletní zážitek",
+    price: "12 900",
+    currency: "Kč",
+    description: "Kompletní luxusní zážitek pro totální transformaci pleti",
     features: [
-      "Advanced skin diagnostics",
-      "Dermal filler treatment",
-      "Chemical peel session",
-      "Micro-needling therapy",
-      "Premium aftercare kit",
-      "Priority booking access",
-      "Complimentary touch-ups",
+      "Pokročilá diagnostika pleti",
+      "Dermální výplně",
+      "Chemický peeling",
+      "Mikrojehličková terapie",
+      "Prémiový set péče domů",
+      "Přednostní rezervace",
+      "Bezplatné korekce",
     ],
     popular: false,
   },
@@ -68,14 +71,14 @@ export function PricingSection({ onBookAppointment }: PricingSectionProps) {
           }`}
         >
           <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-            Pricing
+            Ceník
           </p>
           <h2 className="mt-4 font-serif text-4xl font-bold leading-tight text-foreground lg:text-5xl">
-            <span className="text-balance">Invest in your confidence</span>
+            <span className="text-balance">Investujte do svého sebevědomí</span>
           </h2>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            Transparent pricing with no hidden fees. Each package is designed to
-            deliver exceptional results with premium care.
+            Transparentní ceny bez skrytých poplatků. Každý balíček je navržen
+            tak, aby přinesl výjimečné výsledky s prémiovou péčí.
           </p>
         </div>
 
@@ -96,7 +99,7 @@ export function PricingSection({ onBookAppointment }: PricingSectionProps) {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
-                  Most Popular
+                  Nejoblíbenější
                 </div>
               )}
 
@@ -114,9 +117,9 @@ export function PricingSection({ onBookAppointment }: PricingSectionProps) {
 
               <div className="mt-6 flex items-baseline gap-1">
                 <span className="font-serif text-5xl font-bold text-foreground">
-                  ${plan.price}
+                  {plan.price}
                 </span>
-                <span className="text-sm text-muted-foreground">/session</span>
+                <span className="text-sm text-muted-foreground">{plan.currency}</span>
               </div>
 
               <ul className="mt-8 flex flex-1 flex-col gap-3">
@@ -138,7 +141,7 @@ export function PricingSection({ onBookAppointment }: PricingSectionProps) {
                     : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
                 }`}
               >
-                Book This Package
+                Objednat tento balíček
               </Button>
             </div>
           ))}

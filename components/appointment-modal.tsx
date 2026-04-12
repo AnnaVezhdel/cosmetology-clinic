@@ -28,26 +28,26 @@ interface AppointmentModalProps {
 }
 
 const services = [
-  "Dermal Fillers",
+  "Dermální výplně",
   "Hydrafacial",
-  "Laser Resurfacing",
-  "Chemical Peels",
-  "Micro-Needling",
-  "PRP Therapy",
-  "Initial Consultation",
+  "Laserové ošetření",
+  "Chemické peelingy",
+  "Mikrojehličkování",
+  "PRP terapie",
+  "Úvodní konzultace",
 ]
 
 const timeSlots = [
-  "9:00 AM",
-  "10:00 AM",
-  "11:00 AM",
-  "12:00 PM",
-  "1:00 PM",
-  "2:00 PM",
-  "3:00 PM",
-  "4:00 PM",
-  "5:00 PM",
-  "6:00 PM",
+  "9:00",
+  "10:00",
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
 ]
 
 export function AppointmentModal({
@@ -84,9 +84,9 @@ export function AppointmentModal({
       message: "",
     })
 
-    toast.success("Appointment request submitted!", {
+    toast.success("Žádost o termín odeslána!", {
       description:
-        "We'll confirm your appointment within 24 hours via email.",
+        "Váš termín potvrdíme do 24 hodin e-mailem.",
     })
   }
 
@@ -98,11 +98,11 @@ export function AppointmentModal({
             <Calendar className="h-6 w-6 text-primary" />
           </div>
           <DialogTitle className="font-serif text-2xl font-bold text-foreground">
-            Book Your Appointment
+            Rezervovat termín
           </DialogTitle>
           <DialogDescription className="text-muted-foreground">
-            Fill in the details below and our team will confirm your
-            appointment within 24 hours.
+            Vyplňte níže uvedené údaje a náš tým potvrdí váš termín
+            do 24 hodin.
           </DialogDescription>
         </DialogHeader>
 
@@ -110,11 +110,11 @@ export function AppointmentModal({
           {/* Name */}
           <div className="flex flex-col gap-2">
             <Label htmlFor="name" className="text-sm font-medium text-foreground">
-              Full Name
+              Celé jméno
             </Label>
             <Input
               id="name"
-              placeholder="Your full name"
+              placeholder="Vaše celé jméno"
               required
               value={formData.name}
               onChange={(e) =>
@@ -128,12 +128,12 @@ export function AppointmentModal({
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="flex flex-col gap-2">
               <Label htmlFor="email" className="text-sm font-medium text-foreground">
-                Email
+                E-mail
               </Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="you@email.com"
+                placeholder="vas@email.cz"
                 required
                 value={formData.email}
                 onChange={(e) =>
@@ -144,12 +144,12 @@ export function AppointmentModal({
             </div>
             <div className="flex flex-col gap-2">
               <Label htmlFor="phone" className="text-sm font-medium text-foreground">
-                Phone
+                Telefon
               </Label>
               <Input
                 id="phone"
                 type="tel"
-                placeholder="+1 (555) 000-0000"
+                placeholder="+420 777 888 999"
                 required
                 value={formData.phone}
                 onChange={(e) =>
@@ -162,7 +162,7 @@ export function AppointmentModal({
 
           {/* Service */}
           <div className="flex flex-col gap-2">
-            <Label className="text-sm font-medium text-foreground">Service</Label>
+            <Label className="text-sm font-medium text-foreground">Služba</Label>
             <Select
               value={formData.service}
               onValueChange={(value) =>
@@ -171,7 +171,7 @@ export function AppointmentModal({
               required
             >
               <SelectTrigger className="rounded-lg border-border bg-background">
-                <SelectValue placeholder="Select a treatment" />
+                <SelectValue placeholder="Vyberte ošetření" />
               </SelectTrigger>
               <SelectContent>
                 {services.map((service) => (
@@ -187,7 +187,7 @@ export function AppointmentModal({
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="flex flex-col gap-2">
               <Label htmlFor="date" className="text-sm font-medium text-foreground">
-                Preferred Date
+                Preferovaný datum
               </Label>
               <Input
                 id="date"
@@ -201,7 +201,7 @@ export function AppointmentModal({
               />
             </div>
             <div className="flex flex-col gap-2">
-              <Label className="text-sm font-medium text-foreground">Preferred Time</Label>
+              <Label className="text-sm font-medium text-foreground">Preferovaný čas</Label>
               <Select
                 value={formData.time}
                 onValueChange={(value) =>
@@ -210,7 +210,7 @@ export function AppointmentModal({
                 required
               >
                 <SelectTrigger className="rounded-lg border-border bg-background">
-                  <SelectValue placeholder="Select a time" />
+                  <SelectValue placeholder="Vyberte čas" />
                 </SelectTrigger>
                 <SelectContent>
                   {timeSlots.map((slot) => (
@@ -226,12 +226,12 @@ export function AppointmentModal({
           {/* Message */}
           <div className="flex flex-col gap-2">
             <Label htmlFor="message" className="text-sm font-medium text-foreground">
-              Additional Notes{" "}
-              <span className="text-muted-foreground">(optional)</span>
+              Doplňující poznámky{" "}
+              <span className="text-muted-foreground">(volitelné)</span>
             </Label>
             <Textarea
               id="message"
-              placeholder="Tell us about any concerns or questions..."
+              placeholder="Sdělte nám své dotazy nebo obavy..."
               rows={3}
               value={formData.message}
               onChange={(e) =>
@@ -246,17 +246,17 @@ export function AppointmentModal({
             disabled={isSubmitting}
             className="mt-2 w-full rounded-full bg-primary py-6 text-sm font-medium text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg disabled:opacity-50"
           >
-            {isSubmitting ? "Submitting..." : "Request Appointment"}
+            {isSubmitting ? "Odesílám..." : "Odeslat žádost o termín"}
           </Button>
 
           <p className="text-center text-xs text-muted-foreground">
-            {"By submitting, you agree to our "}
+            {"Odesláním souhlasíte s našimi "}
             <a href="#" className="text-primary underline">
-              privacy policy
+              zásadami ochrany soukromí
             </a>
-            {" and "}
+            {" a "}
             <a href="#" className="text-primary underline">
-              terms of service
+              obchodními podmínkami
             </a>
             .
           </p>

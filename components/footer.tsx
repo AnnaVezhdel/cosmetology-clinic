@@ -2,23 +2,23 @@ import { Heart } from "lucide-react"
 
 const footerLinks = [
   {
-    title: "Services",
+    title: "Služby",
     links: [
-      "Dermal Fillers",
+      "Dermální výplně",
       "Hydrafacial",
-      "Laser Resurfacing",
-      "Chemical Peels",
-      "Micro-Needling",
-      "PRP Therapy",
+      "Laserové ošetření",
+      "Chemické peelingy",
+      "Mikrojehličkování",
+      "PRP terapie",
     ],
   },
   {
-    title: "Company",
-    links: ["About Us", "Our Team", "Careers", "Blog", "Press"],
+    title: "Společnost",
+    links: ["O nás", "Náš tým", "Kariéra", "Blog", "Novinky"],
   },
   {
-    title: "Support",
-    links: ["FAQ", "Privacy Policy", "Terms of Service", "Accessibility"],
+    title: "Podpora",
+    links: ["Časté dotazy", "Ochrana soukromí", "Obchodní podmínky", "Přístupnost"],
   },
 ]
 
@@ -38,8 +38,8 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Where science meets the art of beauty. Premium cosmetic treatments
-              in a luxurious, calming environment.
+              Kde se věda setkává s uměním krásy. Prémiová kosmetická ošetření
+              v luxusním a uklidňujícím prostředí.
             </p>
           </div>
 
@@ -66,11 +66,11 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
           <p className="text-sm text-muted-foreground">
-            2026 Lumiere Aesthetics. All rights reserved.
+            2026 Lumiere Aesthetics. Všechna práva vyhrazena.
           </p>
           <p className="flex items-center gap-1 text-sm text-muted-foreground">
-            Made with <Heart className="h-3.5 w-3.5 fill-primary text-primary" /> for
-            beautiful skin
+            Vytvořeno s <Heart className="h-3.5 w-3.5 fill-primary text-primary" /> pro
+            krásnou pleť
           </p>
         </div>
       </div>

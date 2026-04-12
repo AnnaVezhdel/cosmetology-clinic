@@ -20,7 +20,7 @@ export function AboutSection() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
               <Image
                 src="/images/about.jpg"
-                alt="Dr. Elena, lead aesthetician at Lumiere Aesthetics"
+                alt="MUDr. Elena, vedoucí estetička v Lumiere Aesthetics"
                 fill
                 className="object-cover"
               />
@@ -29,7 +29,7 @@ export function AboutSection() {
             <div className="absolute -bottom-6 -right-6 rounded-2xl border border-border bg-card p-6 shadow-xl md:bottom-8 md:right-[-2rem]">
               <p className="font-serif text-3xl font-bold text-primary">15+</p>
               <p className="mt-1 text-sm font-medium text-muted-foreground">
-                Years of Excellence
+                Let profesionální péče
               </p>
             </div>
           </div>
@@ -41,25 +41,25 @@ export function AboutSection() {
             }`}
           >
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-              About Us
+              O nás
             </p>
             <h2 className="mt-4 font-serif text-4xl font-bold leading-tight text-foreground lg:text-5xl">
               <span className="text-balance">
-                Where science meets the art of beauty
+                Kde se věda setkává s uměním krásy
               </span>
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              At Lumiere Aesthetics, we believe that true beauty comes from
-              within. Founded by Dr. Elena Marchetti, our clinic combines
-              advanced medical expertise with a deeply personal approach to
-              aesthetic care. Every treatment is tailored to enhance your unique
-              features and restore your natural confidence.
+              V Lumiere Aesthetics věříme, že skutečná krása vychází zevnitř.
+              Naše klinika kombinuje pokročilé lékařské znalosti s hluboce
+              osobním přístupem k estetické péči. Každé ošetření je přizpůsobeno
+              tak, aby zvýraznilo vaše jedinečné rysy a obnovilo vaše přirozené
+              sebevědomí.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Our team of board-certified specialists uses only the finest
-              products and cutting-edge techniques to deliver results that look
-              and feel natural. We are committed to creating a warm, safe space
-              where you can relax and let us take care of the rest.
+              Náš tým certifikovaných specialistů používá pouze ty nejkvalitnější
+              produkty a nejmodernější techniky, aby dosáhl výsledků, které vypadají
+              a působí přirozeně. Pečujeme o ženy i muže a vytváříme příjemné,
+              bezpečné prostředí, kde se můžete uvolnit.
             </p>
 
             {/* Values */}
@@ -67,21 +67,21 @@ export function AboutSection() {
               {[
                 {
                   icon: Sparkles,
-                  title: "Expert Care",
+                  title: "Odborná péče",
                   description:
-                    "Board-certified specialists with decades of combined experience",
+                    "Certifikovaní specialisté s desítkami let zkušeností",
                 },
                 {
                   icon: Heart,
-                  title: "Personal Approach",
+                  title: "Osobní přístup",
                   description:
-                    "Customized treatment plans designed for your unique needs",
+                    "Individuální plány ošetření navržené pro vaše potřeby",
                 },
                 {
                   icon: Shield,
-                  title: "Safety First",
+                  title: "Bezpečnost na prvním místě",
                   description:
-                    "FDA-approved treatments in a state-of-the-art facility",
+                    "Schválené procedury v moderně vybaveném zařízení",
                 },
               ].map((value) => (
                 <div key={value.title} className="flex items-start gap-4">

@@ -7,23 +7,23 @@ import Image from "next/image"
 const contactInfo = [
   {
     icon: MapPin,
-    title: "Visit Us",
-    lines: ["123 Beaumont Avenue", "Beverly Hills, CA 90210"],
+    title: "Navštivte nás",
+    lines: ["Pařížská 15", "Praha 1, 110 00"],
   },
   {
     icon: Phone,
-    title: "Call Us",
-    lines: ["+1 (310) 555-0199", "+1 (310) 555-0200"],
+    title: "Zavolejte nám",
+    lines: ["+420 222 333 444", "+420 222 333 445"],
   },
   {
     icon: Mail,
-    title: "Email Us",
-    lines: ["hello@lumiere-aesthetics.com", "appointments@lumiere-aesthetics.com"],
+    title: "Napište nám",
+    lines: ["info@lumiere-aesthetics.cz", "objednani@lumiere-aesthetics.cz"],
   },
   {
     icon: Clock,
-    title: "Working Hours",
-    lines: ["Mon - Fri: 9:00 AM - 7:00 PM", "Sat: 10:00 AM - 5:00 PM"],
+    title: "Otevírací doba",
+    lines: ["Po - Pá: 9:00 - 19:00", "So: 10:00 - 17:00"],
   },
 ]
 
@@ -41,16 +41,17 @@ export function ContactSection() {
             }`}
           >
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-              Get in Touch
+              Kontakt
             </p>
             <h2 className="mt-4 font-serif text-4xl font-bold leading-tight text-foreground lg:text-5xl">
               <span className="text-balance">
-                {"We'd love to hear from you"}
+                Rádi vás uvidíme
               </span>
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Ready to begin your beauty journey? Reach out to us through any of
-              the channels below, or simply book an appointment online.
+              Jste připraveni začít svou cestu za krásou? Kontaktujte nás
+              prostřednictvím kteréhokoliv z níže uvedených kanálů, nebo si
+              jednoduše rezervujte termín online.
             </p>
 
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -87,7 +88,7 @@ export function ContactSection() {
             <div className="relative aspect-square overflow-hidden rounded-3xl lg:aspect-[4/5]">
               <Image
                 src="/images/clinic-interior.jpg"
-                alt="Lumiere Aesthetics clinic interior"
+                alt="Interiér kliniky Lumiere Aesthetics"
                 fill
                 className="object-cover"
               />

@@ -14,45 +14,45 @@ import {
 const services = [
   {
     icon: Syringe,
-    title: "Dermal Fillers",
+    title: "Dermální výplně",
     description:
-      "Restore volume, smooth wrinkles, and enhance facial contours with premium hyaluronic acid fillers.",
+      "Obnovte objem, vyhlaďte vrásky a zvýrazněte kontury obličeje prémiovými kyselinovými výplněmi.",
     image: "/images/botox-treatment.jpg",
   },
   {
     icon: Droplets,
     title: "Hydrafacial",
     description:
-      "Deep cleansing, exfoliation, and hydration treatment for instantly radiant and refreshed skin.",
+      "Hloubkové čištění, peeling a hydratace pro okamžitě zářivou a osvěženou pleť.",
     image: "/images/facial-treatment.jpg",
   },
   {
     icon: Scan,
-    title: "Laser Resurfacing",
+    title: "Laserové ošetření",
     description:
-      "Advanced fractional laser technology to improve skin texture, tone, and reduce signs of aging.",
+      "Pokročilá frakční laserová technologie pro zlepšení textury, tónu pleti a redukci známek stárnutí.",
     image: "/images/skin-care.jpg",
   },
   {
     icon: Sun,
-    title: "Chemical Peels",
+    title: "Chemické peelingy",
     description:
-      "Medical-grade peels to reveal fresh, luminous skin and address pigmentation and fine lines.",
-    image: "/images/hero.jpg",
+      "Profesionální peelingy pro odhalení svěží, zářivé pleti a řešení pigmentace a jemných vrásek.",
+    image: "/images/chemical-peel.jpg",
   },
   {
     icon: Scissors,
-    title: "Micro-Needling",
+    title: "Mikrojehličkování",
     description:
-      "Stimulate collagen production and improve skin texture with our precision micro-needling treatments.",
-    image: "/images/clinic-interior.jpg",
+      "Stimulujte tvorbu kolagenu a zlepšete texturu pleti přesným mikrojehličkovým ošetřením.",
+    image: "/images/microneedling.jpg",
   },
   {
     icon: Flower2,
-    title: "PRP Therapy",
+    title: "PRP terapie",
     description:
-      "Harness your body's natural healing power to rejuvenate skin and promote hair restoration.",
-    image: "/images/about.jpg",
+      "Využijte přirozenou léčivou sílu těla k omlazení pleti a podpoře regenerace.",
+    image: "/images/prp-therapy.jpg",
   },
 ]
 
@@ -69,17 +69,17 @@ export function ServicesSection() {
           }`}
         >
           <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-            Our Services
+            Naše služby
           </p>
           <h2 className="mt-4 font-serif text-4xl font-bold leading-tight text-foreground lg:text-5xl">
             <span className="text-balance">
-              Treatments tailored to your beauty
+              Ošetření přizpůsobená vašim potřebám
             </span>
           </h2>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            From subtle refinements to transformative procedures, we offer a
-            comprehensive range of aesthetic treatments performed by our expert
-            team.
+            Od jemných úprav po transformační procedury nabízíme komplexní
+            škálu estetických ošetření pro ženy i muže, prováděných naším
+            týmem odborníků.
           </p>
         </div>
 

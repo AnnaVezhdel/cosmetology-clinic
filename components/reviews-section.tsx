@@ -5,46 +5,46 @@ import { Star, Quote } from "lucide-react"
 
 const reviews = [
   {
-    name: "Isabella Rossi",
-    treatment: "Dermal Fillers",
+    name: "Petra Nováková",
+    treatment: "Dermální výplně",
     rating: 5,
-    text: "The results exceeded my expectations. Dr. Marchetti truly listened to what I wanted and delivered the most natural-looking results. I feel like the best version of myself.",
-    date: "2 weeks ago",
+    text: "Výsledky předčily moje očekávání. Paní doktorka opravdu naslouchala tomu, co chci, a dosáhla nejpřirozenějších výsledků. Cítím se jako lepší verze sebe sama.",
+    date: "před 2 týdny",
   },
   {
-    name: "Charlotte Webb",
+    name: "Martin Svoboda",
     treatment: "Hydrafacial",
     rating: 5,
-    text: "From the moment I walked in, I felt completely at ease. The Hydrafacial left my skin absolutely glowing. My friends keep asking what my secret is!",
-    date: "1 month ago",
+    text: "Od chvíle, kdy jsem vešel, jsem se cítil naprosto v pohodě. Hydrafacial zanechal moji pleť absolutně zářivou. Kolegové se ptají, co je moje tajemství!",
+    date: "před měsícem",
   },
   {
-    name: "Sophia Laurent",
-    treatment: "Laser Resurfacing",
+    name: "Jana Dvořáková",
+    treatment: "Laserové ošetření",
     rating: 5,
-    text: "After years of dealing with uneven skin tone, the laser treatment gave me the clear, radiant complexion I always dreamed of. The team was incredibly supportive throughout.",
-    date: "3 weeks ago",
+    text: "Po letech řešení nerovnoměrného tónu pleti mi laserové ošetření dalo čistou, zářivou pleť, o které jsem vždy snila. Tým byl neuvěřitelně podporující.",
+    date: "před 3 týdny",
   },
   {
-    name: "Amara Okafor",
-    treatment: "Chemical Peel",
+    name: "Tomáš Procházka",
+    treatment: "Chemický peeling",
     rating: 5,
-    text: "I was nervous about my first chemical peel, but the team made me feel so comfortable. My skin has never looked better, and the aftercare support was wonderful.",
-    date: "1 month ago",
+    text: "Měl jsem obavy z prvního chemického peelingu, ale tým mě naprosto uklidnil. Moje pleť nikdy nevypadala lépe a následná péče byla skvělá.",
+    date: "před měsícem",
   },
   {
-    name: "Elena Vasquez",
-    treatment: "Micro-Needling",
+    name: "Lucie Černá",
+    treatment: "Mikrojehličkování",
     rating: 5,
-    text: "The micro-needling sessions have completely transformed my skin texture. The clinic is beautiful, the staff is warm, and the results speak for themselves.",
-    date: "2 months ago",
+    text: "Mikrojehličkování kompletně změnilo texturu mé pleti. Klinika je krásná, personál přátelský a výsledky mluví samy za sebe.",
+    date: "před 2 měsíci",
   },
   {
-    name: "Lily Chen",
-    treatment: "PRP Therapy",
+    name: "David Horák",
+    treatment: "PRP terapie",
     rating: 5,
-    text: "I tried PRP therapy for skin rejuvenation and I am amazed at the results. My skin looks years younger. Lumiere Aesthetics is truly in a league of its own.",
-    date: "6 weeks ago",
+    text: "Vyzkoušel jsem PRP terapii pro omlazení pleti a jsem ohromený výsledky. Moje pleť vypadá o roky mladší. Lumiere Aesthetics je ve své vlastní lize.",
+    date: "před 6 týdny",
   },
 ]
 
@@ -61,16 +61,16 @@ export function ReviewsSection() {
           }`}
         >
           <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
-            Client Reviews
+            Recenze klientů
           </p>
           <h2 className="mt-4 font-serif text-4xl font-bold leading-tight text-foreground lg:text-5xl">
             <span className="text-balance">
-              Hear from our lovely clients
+              Co říkají naši klienti
             </span>
           </h2>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            Real stories from real people. Discover why thousands of clients
-            trust us with their beauty journey.
+            Skutečné příběhy od skutečných lidí. Zjistěte, proč nám tisíce
+            klientů svěřují svou cestu za krásou.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export function ReviewsSection() {
               </div>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                {`"${review.text}"`}
+                {`„${review.text}"`}
               </p>
 
               <div className="mt-6 flex items-center justify-between border-t border-border pt-4">

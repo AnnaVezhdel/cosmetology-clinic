@@ -5,11 +5,11 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Contact", href: "#contact" },
+  { label: "O nás", href: "#about" },
+  { label: "Služby", href: "#services" },
+  { label: "Ceník", href: "#pricing" },
+  { label: "Recenze", href: "#reviews" },
+  { label: "Kontakt", href: "#contact" },
 ]
 
 interface NavbarProps {
@@ -64,7 +64,7 @@ export function Navbar({ onBookAppointment }: NavbarProps) {
             onClick={onBookAppointment}
             className="rounded-full bg-primary px-6 py-2 text-sm font-medium text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
           >
-            Book Appointment
+            Objednat se
           </Button>
         </div>
 
@@ -72,7 +72,7 @@ export function Navbar({ onBookAppointment }: NavbarProps) {
         <button
           className="lg:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-label={isMobileMenuOpen ? "Zavřít menu" : "Otevřít menu"}
         >
           {isMobileMenuOpen ? (
             <X className="h-6 w-6 text-foreground" />
@@ -103,7 +103,7 @@ export function Navbar({ onBookAppointment }: NavbarProps) {
               }}
               className="mt-2 rounded-full bg-primary px-6 py-2 text-sm font-medium text-primary-foreground"
             >
-              Book Appointment
+              Objednat se
             </Button>
           </div>
         </div>
