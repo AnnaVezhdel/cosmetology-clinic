@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-import { Sparkles, Heart, Shield } from "lucide-react"
+import Image from "next/image";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Sparkles, Heart, Shield } from "lucide-react";
 
 export function AboutSection() {
-  const { ref, isVisible } = useScrollAnimation(0.15)
+  const { ref, isVisible } = useScrollAnimation(0.15);
 
   return (
     <section id="about" className="py-24 lg:py-32">
@@ -27,7 +27,7 @@ export function AboutSection() {
             </div>
             {/* Floating card */}
             <div className="absolute -bottom-6 -right-6 rounded-2xl border border-border bg-card p-6 shadow-xl md:bottom-8 md:right-[-2rem]">
-              <p className="font-serif text-3xl font-bold text-primary">15+</p>
+              <p className="font-serif text-3xl font-bold text-primary">10+</p>
               <p className="mt-1 text-sm font-medium text-muted-foreground">
                 Let profesionální péče
               </p>
@@ -36,9 +36,7 @@ export function AboutSection() {
 
           {/* Content side */}
           <div
-            className={`${
-              isVisible ? "animate-slide-in-right" : "opacity-0"
-            }`}
+            className={`${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
           >
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
               O nás
@@ -56,10 +54,11 @@ export function AboutSection() {
               sebevědomí.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Náš tým certifikovaných specialistů používá pouze ty nejkvalitnější
-              produkty a nejmodernější techniky, aby dosáhl výsledků, které vypadají
-              a působí přirozeně. Pečujeme o ženy i muže a vytváříme příjemné,
-              bezpečné prostředí, kde se můžete uvolnit.
+              Náš tým certifikovaných specialistů používá pouze ty
+              nejkvalitnější produkty a nejmodernější techniky, aby dosáhl
+              výsledků, které vypadají a působí přirozeně. Pečujeme o ženy i
+              muže a vytváříme příjemné, bezpečné prostředí, kde se můžete
+              uvolnit.
             </p>
 
             {/* Values */}
@@ -103,5 +102,5 @@ export function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

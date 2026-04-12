@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-import { Button } from "@/components/ui/button"
-import { Check } from "lucide-react"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 
 interface PricingSectionProps {
-  onBookAppointment: () => void
+  onBookAppointment: () => void;
 }
 
 const pricingPlans = [
@@ -28,7 +28,8 @@ const pricingPlans = [
     subtitle: "Nejoblíbenější",
     price: "6 900",
     currency: "Kč",
-    description: "Náš nejoblíbenější balíček kombinující více omlazovacích procedur",
+    description:
+      "Náš nejoblíbenější balíček kombinující více omlazovacích procedur",
     features: [
       "Komplexní analýza pleti",
       "Hydrafacial ošetření",
@@ -56,10 +57,10 @@ const pricingPlans = [
     ],
     popular: false,
   },
-]
+];
 
 export function PricingSection({ onBookAppointment }: PricingSectionProps) {
-  const { ref, isVisible } = useScrollAnimation(0.1)
+  const { ref, isVisible } = useScrollAnimation(0.1);
 
   return (
     <section id="pricing" className="py-24 lg:py-32">
@@ -119,7 +120,9 @@ export function PricingSection({ onBookAppointment }: PricingSectionProps) {
                 <span className="font-serif text-5xl font-bold text-foreground">
                   {plan.price}
                 </span>
-                <span className="text-sm text-muted-foreground">{plan.currency}</span>
+                <span className="text-sm text-muted-foreground">
+                  {plan.currency}
+                </span>
               </div>
 
               <ul className="mt-8 flex flex-1 flex-col gap-3">
@@ -135,10 +138,10 @@ export function PricingSection({ onBookAppointment }: PricingSectionProps) {
 
               <Button
                 onClick={onBookAppointment}
-                className={`mt-8 w-full rounded-full py-6 text-sm font-medium transition-all duration-300 ${
+                className={`mt-8 w-full rounded-full py-6 text-sm cursor-pointer font-medium transition-all duration-300 ${
                   plan.popular
                     ? "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg"
-                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    : "bg-secondary text-secondary-foreground hover:bg-primary/20 hover:shadow-lg"
                 }`}
               >
                 Objednat tento balíček
@@ -148,5 +151,5 @@ export function PricingSection({ onBookAppointment }: PricingSectionProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }
